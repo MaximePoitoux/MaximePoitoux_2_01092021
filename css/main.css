@@ -1,0 +1,109 @@
+.signup {
+  text-decoration: none;
+  color: #0065fc;
+  font-weight: bold;
+}
+
+header div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  width: 110px;
+}
+
+.nav ul {
+  list-style-type: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.nav ul li {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav ul li a:focus {
+  color: #0065fc;
+  border-bottom: 2px solid #0065fc;
+}
+
+.main-container {
+  margin: 0 30px;
+}
+
+.introduction {
+  display: flex;
+  flex-direction: column;
+}
+
+.searchbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  border: 1px solid #f2f2f2;
+  border-radius: 12px;
+}
+
+.searchbar-container div {
+  width: 19%;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+}
+
+.searchbar-container div:last-child {
+  background-color: #0065fc !important;
+}
+
+.searchbar-container input {
+  border: none;
+  width: 62%;
+  outline: none;
+  font-size: 1.2em;
+  padding: 0 10px;
+}
+
+.filter-container .button-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filter-container .button-container button {
+  margin: 5px;
+  border: none;
+  border-radius: 15px;
+  width: 45%;
+  height: 50px;
+}
+
+/* ==========================================================================
+ Media Queries
+ ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+}
+
+@media only screen and (min-width: 768px) {
+}
+
+@media only screen and (min-width: 1140px) {
+}
