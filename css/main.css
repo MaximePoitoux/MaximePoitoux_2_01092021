@@ -44,8 +44,8 @@ header div:first-child {
   border-bottom: 2px solid #0065fc;
 }
 
-.main-container {
-  margin: 0 30px;
+.bloc-1 {
+  margin: 0 20px;
 }
 
 .introduction {
@@ -88,11 +88,132 @@ header div:first-child {
 }
 
 .filter-container .button-container button {
-  margin: 5px;
-  border: none;
-  border-radius: 15px;
-  width: 45%;
   height: 50px;
+  background: inherit;
+  border: 2px solid #f2f2f2;
+  border-radius: 30px;
+  border-left-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.filter-container .button-container div:first-child {
+  background-color: #deebff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: inherit;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+}
+
+.filter-container .button-container div:last-child {
+  padding: 10px;
+}
+
+.information-container {
+  display: flex;
+  margin: 20px 0;
+}
+
+.information-container span {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #deebff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.information-container p {
+  margin: 0;
+}
+
+.bloc-2 {
+  background-color: #f2f2f2;
+}
+
+.most-popular-container {
+  margin: 20px;
+  padding-top: 20px;
+}
+
+.most-popular-container .most-popular-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.most-popular-container .cards-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.most-popular-container .cards-container .card {
+  background-color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 30px;
+  width: 100%;
+  height: 170px;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+}
+
+.most-popular-container .cards-container .card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.most-popular-container .cards-container .card .card-content {
+  display: flex;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.most-popular-container .cards-container .card .card-content div:first-child {
+  width: 45%;
+  object-fit: cover;
+}
+
+.most-popular-container .cards-container .card .card-content .image1 {
+  content: url("../images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg");
+  border-top-left-radius: inherit;
+  border-bottom-left-radius: inherit;
+}
+
+.most-popular-container .cards-container .card .card-content .image2 {
+  content: url("../images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg");
+  border-top-left-radius: inherit;
+  border-bottom-left-radius: inherit;
+}
+
+.most-popular-container .cards-container .card .card-content .image3 {
+  content: url("../images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg");
+  border-top-left-radius: inherit;
+  border-bottom-left-radius: inherit;
+}
+
+.most-popular-container .cards-container .card .card-content div:last-child {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 14px;
 }
 
 /* ==========================================================================
