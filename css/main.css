@@ -1,21 +1,26 @@
-.signup {
-  text-decoration: none;
-  color: #0065fc;
-  font-weight: bold;
-}
+/* Méthodologie BEM */
 
-header div:first-child {
+/* ========================================================================== 
+HEADER
+========================================================================== */
+.header-container__content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
 }
 
-.logo {
+.header-container__image {
   width: 110px;
 }
 
-.nav ul {
+.header-container__link {
+  text-decoration: none;
+  color: #0065fc;
+  font-weight: bold;
+}
+
+.header-container__nav ul {
   list-style-type: none;
   text-decoration: none;
   display: flex;
@@ -23,13 +28,13 @@ header div:first-child {
   padding: 0;
 }
 
-.nav ul li {
+.header-container__nav li {
   width: 50%;
   display: flex;
   justify-content: center;
 }
 
-.nav ul li a {
+.header-container__nav ul li a {
   text-decoration: none;
   color: black;
   width: 100%;
@@ -39,21 +44,28 @@ header div:first-child {
   border-bottom: 3px solid rgba(0, 0, 0, 0.1);
 }
 
-.nav ul li a:focus {
+.header-container__nav ul li a:focus {
   color: #0065fc;
   border-bottom: 3px solid #0065fc;
 }
 
+/* ========================================================================== 
+BLOC-1
+========================================================================== */
 .bloc-1 {
   margin: 0 20px;
 }
 
-.introduction {
+.bloc-1__introduction {
   display: flex;
   flex-direction: column;
 }
 
-.searchbar-container {
+.bloc-1__introduction h1 {
+  margin-bottom: 0
+}
+
+.bloc-1__searchbar {
   display: flex;
   justify-content: space-between;
   height: 50px;
@@ -61,7 +73,7 @@ header div:first-child {
   border-radius: 12px;
 }
 
-.searchbar-container div {
+.bloc-1__searchbar div {
   width: 19%;
   background-color: #f2f2f2;
   display: flex;
@@ -70,14 +82,14 @@ header div:first-child {
   border-radius: 12px;
 }
 
-.searchbar-container button {
+.bloc-1__searchbar button {
   background-color: #0065fc !important;
   border: none;
   width: 18%;
   border-radius: 12px;
 }
 
-.searchbar-container input {
+.bloc-1__searchbar input {
   border: none;
   width: 62%;
   outline: none;
@@ -85,16 +97,16 @@ header div:first-child {
   padding: 0 10px;
 }
 
-.filter-container h2 {
+.bloc-1__filter-container h2 {
   margin-top: 25px;
 }
 
-.filter-container .button-container {
+.bloc-1__filter-container__button-container {
   display: flex;
   flex-wrap: wrap;
 }
 
-.filter-container .button-container button {
+.bloc-1__filter-container__button-container button {
   height: 50px;
   background: inherit;
   border: 2px solid #f2f2f2;
@@ -108,7 +120,7 @@ header div:first-child {
   padding: 0;
 }
 
-.filter-container .button-container div:first-child {
+.bloc-1__filter-container__button-container div:first-child {
   background-color: #deebff;
   display: flex;
   align-items: center;
@@ -119,16 +131,16 @@ header div:first-child {
   border-radius: 25px;
 }
 
-.filter-container .button-container div:last-child {
+.bloc-1__filter-container__button-container div:last-child {
   padding: 10px;
 }
 
-.information-container {
+.bloc-1__information-container {
   display: flex;
   margin: 20px 0;
 }
 
-.information-container span {
+.bloc-1__information-container span {
   width: 20px;
   height: 20px;
   border: 1px solid #deebff;
@@ -139,27 +151,30 @@ header div:first-child {
   margin-right: 8px;
 }
 
-.information-container p {
+.bloc-1__information-container p {
   margin: 0;
 }
 
+/* ========================================================================== 
+BLOC-2
+========================================================================== */
 .bloc-2 {
   background-color: #f2f2f2;
 }
 
-.most-popular-container {
+.bloc-2__most-popular-container {
   margin: 20px;
   padding: 20px 0;
 }
 
-.most-popular-container .most-popular-header {
+.bloc-2__most-popular-container__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 10px;
 }
 
-.most-popular-container .cards-container {
+.bloc-2__most-popular-container__cards-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -167,7 +182,7 @@ header div:first-child {
   margin: 15px 0;
 }
 
-.most-popular-container .cards-container .card {
+.bloc-2__most-popular-container__cards-container__card {
   background-color: white;
   cursor: pointer;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -181,47 +196,47 @@ header div:first-child {
   margin: 8px 0;
 }
 
-.most-popular-container .cards-container a {
+.bloc-2__most-popular-container__cards-container__card a {
   color: inherit;
   text-decoration: none;
   height: 100%;
   border-radius: inherit;
 }
 
-.most-popular-container .cards-container .card:hover {
+.bloc-2__most-popular-container__cards-container__card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-.most-popular-container .cards-container .card .card-content {
+.bloc-2__most-popular-container__cards-container__card__content {
   display: flex;
   height: 100%;
   border-radius: inherit;
 }
 
-.most-popular-container .cards-container .card .card-content div:first-child {
+.bloc-2__most-popular-container__cards-container__card__content div:first-child {
   width: 45%;
   object-fit: cover;
 }
 
-.most-popular-container .cards-container .card .card-content .image1 {
+.bloc-2__most-popular-container__cards-container__card__content .image1 {
   content: url("../images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg");
   border-top-left-radius: inherit;
   border-bottom-left-radius: inherit;
 }
 
-.most-popular-container .cards-container .card .card-content .image2 {
+.bloc-2__most-popular-container__cards-container__card__content .image2 {
   content: url("../images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg");
   border-top-left-radius: inherit;
   border-bottom-left-radius: inherit;
 }
 
-.most-popular-container .cards-container .card .card-content .image3 {
+.bloc-2__most-popular-container__cards-container__card__content .image3 {
   content: url("../images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg");
   border-top-left-radius: inherit;
   border-bottom-left-radius: inherit;
 }
 
-.most-popular-container .cards-container .card .card-content .text {
+.bloc-2__most-popular-container__cards-container__card__content .text {
   width: 70%;
   display: flex;
   flex-direction: column;
@@ -230,33 +245,36 @@ header div:first-child {
   padding-left: 14px;
 }
 
-.most-popular-container .cards-container .card .card-content .stars {
+.bloc-2__most-popular-container__cards-container__card__content .stars {
   height: 100%;
   display: flex;
   align-items: flex-end;
   margin-bottom: 5px;
 }
 
-.most-popular-container .cards-container .card .card-content p {
+.bloc-2__most-popular-container__cards-container__card__content p {
   margin: 0;
 }
 
-.accommodations-container {
+/* ========================================================================== 
+BLOC-3
+========================================================================== */
+.bloc-3__accommodations-container {
   margin: 20px;
   padding: 20px 0;
 }
 
-.accommodations-container button {
+.bloc-3__accommodations-container button {
   font-size: 1.2em;
   margin: 0.67em 0;
   font-weight: bold;
 }
 
-.accommodations-container .accommodations-header {
+.bloc-3__accommodations-container__header {
   margin-top: 10px;
 }
 
-.accommodations-container .cards-container {
+.bloc-3__accommodations-container__cards-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -264,7 +282,7 @@ header div:first-child {
   margin: 15px 0;
 }
 
-.accommodations-container .cards-container .card {
+.bloc-3__accommodations-container__cards-container__card {
   background-color: white;
   cursor: pointer;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -278,31 +296,32 @@ header div:first-child {
   margin: 10px 0;
 }
 
-.accommodations-container .cards-container .card a {
+.bloc-3__accommodations-container__cards-container__card a {
   color: inherit;
   text-decoration: none;
   height: 100%;
+  width: 100%;
   border-radius: inherit;
 }
 
-.accommodations-container .cards-container .card:hover {
+.bloc-3__accommodations-container__cards-container__card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-.accommodations-container .cards-container .card .card-content {
+.bloc-3__accommodations-container__cards-container__card__content {
   display: flex;
   flex-direction: column;
   height: 100%;
   border-radius: inherit;
 }
 
-.accommodations-container .cards-container .card .card-content div:first-child {
+.bloc-3__accommodations-container__cards-container__card__content div:first-child {
   width: 100%;
   height: 55%;
   border-radius: inherit;
 }
 
-.accommodations-container .cards-container .card .card-content div img {
+.bloc-3__accommodations-container__cards-container__card__content div img {
   display: block;
   width: 100%;
   height: 100%;
@@ -311,7 +330,7 @@ header div:first-child {
   border-top-right-radius: inherit;
 }
 
-.accommodations-container .cards-container .card .card-content .text {
+.bloc-3__accommodations-container__cards-container__card__content .text {
   width: 100%;
   height: 45%;
   display: flex;
@@ -321,36 +340,39 @@ header div:first-child {
   padding-left: 14px;
 }
 
-.accommodations-container .cards-container .card .card-content .text h2 {
+.bloc-3__accommodations-container__cards-container__card__content .text h2 {
   margin-bottom: 7px;
 }
 
-.accommodations-container .cards-container .card .card-content .stars {
+.bloc-3__accommodations-container__cards-container__card__content .stars {
   height: 100%;
   display: flex;
   align-items: flex-end;
   margin-bottom: 5px;
 }
 
-.accommodations-container .cards-container .card .card-content p {
+.bloc-3__accommodations-container__cards-container__card__content p {
   margin: 0;
 }
 
-.bloc-3 button {
+.bloc-3__btn {
   background: inherit;
   border: none;
 }
 
-.activities-container {
+/* ========================================================================== 
+BLOC-4
+========================================================================== */
+.bloc-4__activities-container {
   margin: 20px;
   padding: 20px 0;
 }
 
-.activities-container .activites-header {
+.bloc-4__activities-container__header {
   margin-top: 10px;
 }
 
-.activities-container .cards-container {
+.bloc-4__activities-container__cards-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -358,7 +380,7 @@ header div:first-child {
   margin: 15px 0;
 }
 
-.activities-container .cards-container .card {
+.bloc-4__activities-container__cards-container__card {
   background-color: white;
   cursor: pointer;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -371,31 +393,32 @@ header div:first-child {
   margin: 12px 0;
 }
 
-.activities-container .cards-container .card a {
+.bloc-4__activities-container__cards-container__card a {
   color: inherit;
   text-decoration: none;
   height: 100%;
+  width: 100%;
   border-radius: inherit;
 }
 
-.activtiies-container .cards-container .card:hover {
+.bloc-4__activities-container__cards-container__card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-.activities-container .cards-container .card .card-content {
+.bloc-4__activities-container__cards-container__card__content {
   display: flex;
   flex-direction: column;
   height: 100%;
   border-radius: inherit;
 }
 
-.activities-container .cards-container .card .card-content div:first-child {
+.bloc-4__activities-container__cards-container__card__content div:first-child {
   width: 100%;
   height: 65%;
   border-radius: inherit;
 }
 
-.activities-container .cards-container .card .card-content div img {
+.bloc-4__activities-container__cards-container__card__content div img {
   display: block;
   width: 100%;
   height: 100%;
@@ -404,51 +427,49 @@ header div:first-child {
   border-top-right-radius: inherit;
 }
 
-.activities-container .cards-container .card .card-content .text {
+.bloc-4__activities-container__cards-container__card__content .text {
   width: 100%;
   height: 35%;
   margin-top: 10px;
   padding-left: 18px;
 }
 
+/* ========================================================================== 
+FOOTER 
+========================================================================== */
 .footer-container {
   background-color: #f2f2f2;
 }
 
-.footer-container footer {
+.footer-container--margin {
   margin: 0 20px;
   display: flex;
   flex-direction: column;
 }
 
-.footer-container div {
+.footer-container div div {
   margin: 10px 0;
 }
 
-.footer-container div ul {
+.footer-container div div ul {
   padding: 0;
   margin-top: 22px;
 }
 
-.footer-container div ul li {
+.footer-container div div ul li {
   list-style-type: none;
   text-decoration: none;
   margin: 12px 0;
 }
 
-.footer-container div ul li a {
+.footer-container div div ul li a {
   text-decoration: none;
   color: black;
 }
 
-/* .accommodations-container .cards-container .card .card-content .text h2 {
-  margin-bottom: 7px;
-} */
-
-
 /* ==========================================================================
- Media Queries
- ========================================================================== */
+Media Queries
+========================================================================== */
 
 @media only screen and (min-width: 480px) {}
 
