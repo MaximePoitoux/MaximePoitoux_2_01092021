@@ -20,12 +20,12 @@
 </head>
 
 <body>
-  <header class="header-container">
-    <div class="header-container__content">
-      <img class="header-container__image" src="images/logo/Reservia.svg" alt="logo" />
-      <a class="header-container__link" href="#">S'inscrire</a>
+  <header class="header">
+    <div class="header__logo">
+      <a href="#"><img src="images/logo/Reservia.svg" alt="logo" /></a>
     </div>
-    <nav class="header-container__nav">
+    <nav class="header__nav">
+      <button>S'inscrire</button>
       <ul>
         <li>
           <a class="active" href="#hebergements">Hébergements</a>
@@ -37,108 +37,98 @@
     </nav>
   </header>
 
-  <div class="bloc-1">
-    <div class="bloc-1__introduction">
-      <h1>
+  <section>
+    <div class="introduction">
+      <h1 class="introduction__title">
         Trouvez votre hébergement pour des vacances de rêve
       </h1>
-      <p>En plein centre ville ou pleine nature</p>
+      <p class="introduction__text">En plein centre ville ou pleine nature</p>
     </div>
 
-    <div class="bloc-1__searchbar">
-      <div>
-        <span style="font-size: 1.2em">
+    <div class="searchbar">
+      <button class="searchbar__btn searchbar__btn--grey">
+        <span class="searchbar__btn__icon">
           <i class="fas fa-map-marker-alt"></i>
         </span>
-      </div>
-      <input placeholder="Marseille, France" />
-      <button>
-        <span style="font-size: 1.1em; color: white">
+      </button>
+      <input class="searchbar__input" placeholder="Marseille, France" />
+      <button class="searchbar__btn searchbar__btn--blue">
+        <p class="searchbar__btn__text">Rechercher</p>
+        <span class="searchbar__btn__icon searchbar__btn__icon--visibility">
           <i class="fas fa-search"></i>
         </span>
       </button>
     </div>
 
-    <div class="bloc-1__filter-container">
-      <h2>Filtres</h2>
-      <div class="bloc-1__filter-container__button-container">
-        <button>
-          <div>
-            <span style="font-size: 1.1em; color: #0065fc">
-              <i class="fas fa-money-bill-wave"></i>
-            </span>
-          </div>
-          <div>Économique</div>
+    <div class="filter">
+      <h2 class="filter__title">Filtres</h2>
+      <div class="filter__btn-container">
+        <button class="filter__btn-container__btn">
+          <span class="filter__btn-container__btn__icon">
+            <i class="fas fa-money-bill-wave"></i>
+          </span>
+          <p class="filter__btn-container__btn__text">Économique</p>
         </button>
-        <button>
-          <div>
-            <span style="font-size: 1.3em; color: #0065fc">
-              <i class="fas fa-child"></i>
-            </span>
-          </div>
-          <div>Familial</div>
+        <button class="filter__btn-container__btn">
+          <span class="filter__btn-container__btn__icon">
+            <i class="fas fa-child"></i>
+          </span>
+          <p class="filter__btn-container__btn__text">Familial</p>
         </button>
-        <button>
-          <div>
-            <span style="font-size: 1.2em; color: #0065fc">
-              <i class="fas fa-heart"></i>
-            </span>
-          </div>
-          <div>Romantique</div>
+        <button class="filter__btn-container__btn">
+          <span class="filter__btn-container__btn__icon">
+            <i class="fas fa-heart"></i>
+          </span>
+          <p class="filter__btn-container__btn__text">Romantique</p>
         </button>
-        <button>
-          <div>
-            <span style="font-size: 1.2em; color: #0065fc">
-              <i class="fas fa-dog"></i>
-            </span>
-          </div>
-          <div>Animaux autorisés</div>
+        <button class="filter__btn-container__btn">
+          <span class="filter__btn-container__btn__icon">
+            <i class="fas fa-dog"></i>
+          </span>
+          <p class="filter__btn-container__btn__text">Animaux autorisés</p>
         </button>
       </div>
     </div>
 
-    <div class="bloc-1__information-container">
-      <div>
-        <span style="font-size: 0.6em; color: #0065fc">
-          <i class="fas fa-info"></i>
+    <div class="information">
+      <span>
+        <i class="fas fa-info information__icon"></i>
+      </span>
+      <p class="information__text">Plus de 500 logements sont disponibles dans cette ville</p>
+    </div>
+  </section>
+
+  <section>
+    <section>
+      <div class="category">
+        <h1 class="category__title">Les plus populaires</h1>
+        <span class="category__icon">
+          <i class="fas fa-chart-line"></i>
         </span>
       </div>
-      <p>Plus de 500 logements sont disponibles dans cette ville</p>
-    </div>
-  </div>
+      <div class="cards-container">
 
-  <div class="bloc-2">
-    <div class="bloc-2__most-popular-container">
-      <div class="bloc-2__most-popular-container__header">
-        <h1>Les plus populaires</h1>
-        <div>
-          <span style="font-size: 1.4em; color: black">
-            <i class="fas fa-chart-line"></i>
-          </span>
-        </div>
-      </div>
-      <div class="bloc-2__most-popular-container__cards-container">
-        <div class="bloc-2__most-popular-container__cards-container__card">
-          <a href="#">
-            <div class="bloc-2__most-popular-container__cards-container__card__content">
-              <div class="image1"></div>
-              <div class="text">
-                <h2>Hôtel Le soleil du matin</h2>
-                <p>Nuit à partir de 128<b>€</b></p>
-                <div class="stars">
-                  <span style="font-size: 0.7em; color: #0065fc; margin: 1px">
+        <div class="card">
+          <a class="card__link" href="#">
+            <div class="card__content">
+              <div class="card__image"></div>
+              <div class="card__text">
+                <h2 class="card__title">Hôtel Le soleil du matin</h2>
+                <p class="card__paragraph">Nuit à partir de 128<b>€</b></p>
+                <div class="card__rating">
+                  <span class="card__star">
                     <i class="fas fa-star"></i>
                   </span>
-                  <span style="font-size: 0.7em; color: #0065fc; margin: 1px">
+                  <span class="card__star">
                     <i class="fas fa-star"></i>
                   </span>
-                  <span style="font-size: 0.7em; color: #0065fc; margin: 1px">
+                  <span class="card__star">
                     <i class="fas fa-star"></i>
                   </span>
-                  <span style="font-size: 0.7em; color: #0065fc; margin: 1px">
+                  <span class="card__star">
                     <i class="fas fa-star"></i>
                   </span>
-                  <span style="font-size: 0.7em; color: #0065fc; margin: 1px">
+                  <span class="card__star">
                     <i class="fas fa-star"></i>
                   </span>
                 </div>
@@ -147,27 +137,56 @@
           </a>
         </div>
 
-        <div class="bloc-2__most-popular-container__cards-container__card">
-          <a href="#">
-            <div class="bloc-2__most-popular-container__cards-container__card__content">
-              <div class="image2"></div>
-              <div class="text">
-                <h2>Au coeur de l'eau Chambres d'hôtes</h2>
-                <p>Nuit à partir de 71<b>€</b></p>
-                <div class="stars">
-                  <span style="font-size: 0.7em; color: #0065fc; margin: 1px">
+        <div class="card">
+          <a class="card__link" href="#">
+            <div class="card__content">
+              <div class="card__image"></div>
+              <div class="card__text">
+                <h2 class="card__title">Au coeur de l'eau Chambres d'hôtes</h2>
+                <p class="card__paragraph">Nuit à partir de 71<b>€</b></p>
+                <div class="card__rating">
+                  <span class="card__star">
                     <i class="fas fa-star"></i>
                   </span>
-                  <span style="font-size: 0.7em; color: #0065fc; margin: 1px">
+                  <span class="card__star">
                     <i class="fas fa-star"></i>
                   </span>
-                  <span style="font-size: 0.7em; color: #0065fc; margin: 1px">
+                  <span class="card__star">
                     <i class="fas fa-star"></i>
                   </span>
-                  <span style="font-size: 0.7em; color: #0065fc; margin: 1px">
+                  <span class="card__star">
                     <i class="fas fa-star"></i>
                   </span>
-                  <span style="font-size: 0.7em; color: #f2f2f2; margin: 1px">
+                  <span class="card__star">
+                    <i class="fas fa-star"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card">
+          <a class="card__link" href="#">
+            <div class="card__content">
+              <div class="card__image"></div>
+              <div class="card__text">
+                <h2 class="card__title">Hôtel Tout bleu et Blanc</h2>
+                <p class="card__paragraph">Nuit à partir de 68<b>€</b></p>
+                <div class="card__rating">
+                  <span class="card__star">
+                    <i class="fas fa-star"></i>
+                  </span>
+                  <span class="card__star">
+                    <i class="fas fa-star"></i>
+                  </span>
+                  <span class="card__star">
+                    <i class="fas fa-star"></i>
+                  </span>
+                  <span class="card__star">
+                    <i class="fas fa-star"></i>
+                  </span>
+                  <span class="card__star">
                     <i class="fas fa-star"></i>
                   </span>
                 </div>
@@ -176,69 +195,40 @@
           </a>
         </div>
 
-        <div class="bloc-2__most-popular-container__cards-container__card">
-          <a href="#">
-            <div class="bloc-2__most-popular-container__cards-container__card__content">
-              <div class="image3"></div>
-              <div class="text">
-                <h2>Hôtel Tout bleu et Blanc</h2>
-                <p>Nuit à partir de 68<b>€</b></p>
-                <div class="stars">
-                  <span style="font-size: 0.7em; color: #0065fc; margin: 1px">
-                    <i class="fas fa-star"></i>
-                  </span>
-                  <span style="font-size: 0.7em; color: #0065fc; margin: 1px">
-                    <i class="fas fa-star"></i>
-                  </span>
-                  <span style="font-size: 0.7em; color: #0065fc; margin: 1px">
-                    <i class="fas fa-star"></i>
-                  </span>
-                  <span style="font-size: 0.7em; color: #0065fc; margin: 1px">
-                    <i class="fas fa-star"></i>
-                  </span>
-                  <span style="font-size: 0.7em; color: #f2f2f2; margin: 1px">
-                    <i class="fas fa-star"></i>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <div id="hebergements" class="bloc-3">
-    <div class="bloc-3__accommodations-container">
-      <div class="bloc-3__accommodations-container__header">
-        <h1>Hébergements à Marseille</h1>
+    <section id="hebergements">
+      <div class="category">
+        <h1 class="category__title">Hébergements à Marseille</h1>
       </div>
-      <div class="bloc-3__accommodations-container__cards-container">
 
-        <div class="bloc-3__accommodations-container__cards-container__card">
-          <a href="#">
-            <div class="bloc-3__accommodations-container__cards-container__card__content">
+      <div class="cards-container">
+
+        <div class="card card--special">
+          <a class="card__link" href="#">
+            <div class="card__content">
               <div>
-                <img src="images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
-                  alt="Auberge la Cannebière" />
+                <img class="card__image card__image--special"
+                  src="images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Auberge la Cannebière" />
               </div>
-              <div class="text">
-                <h2>Auberge la Cannebière</h2>
-                <p>Nuit à partir de 25<b>€</b></p>
-                <div class="stars">
-                  <span style="font-size: 0.7em; color: #0065fc; margin: 1px">
+              <div class="card__text">
+                <h2 class="card__title">Auberge la Cannebière</h2>
+                <p class="card__paragraph">Nuit à partir de 25<b>€</b></p>
+                <div class="card__rating">
+                  <span class="card__star" style="font-size: 0.7em; color: #0065fc; margin: 1px">
                     <i class="fas fa-star"></i>
                   </span>
-                  <span style="font-size: 0.7em; color: #0065fc; margin: 1px">
+                  <span class="card__star" style="font-size: 0.7em; color: #0065fc; margin: 1px">
                     <i class="fas fa-star"></i>
                   </span>
-                  <span style="font-size: 0.7em; color: #0065fc; margin: 1px">
+                  <span class="card__star" style="font-size: 0.7em; color: #0065fc; margin: 1px">
                     <i class="fas fa-star"></i>
                   </span>
-                  <span style="font-size: 0.7em; color: #0065fc; margin: 1px">
+                  <span class="card__star" style="font-size: 0.7em; color: #0065fc; margin: 1px">
                     <i class="fas fa-star"></i>
                   </span>
-                  <span style="font-size: 0.7em; color: #f2f2f2; margin: 1px">
+                  <span class="card__star" style="font-size: 0.7em; color: #f2f2f2; margin: 1px">
                     <i class="fas fa-star"></i>
                   </span>
                 </div>
@@ -247,29 +237,30 @@
           </a>
         </div>
 
-        <div class="bloc-3__accommodations-container__cards-container__card">
-          <a href="#">
-            <div class="bloc-3__accommodations-container__cards-container__card__content">
+        <div class="card card--special">
+          <a class="card__link" href="#">
+            <div class="card__content">
               <div>
-                <img src="images/hebergements/3_medium/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Hôtel du port" />
+                <img class="card__image card__image--special"
+                  src="images/hebergements/3_medium/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Auberge la Cannebière" />
               </div>
-              <div class="text">
+              <div class="card__text">
                 <h2>Hôtel du port</h2>
                 <p>Nuit à partir de 52<b>€</b></p>
-                <div class="stars">
-                  <span style="font-size: 0.7em; color: #0065fc; margin: 1px">
+                <div class="card__rating">
+                  <span class="card__star" style="font-size: 0.7em; color: #0065fc; margin: 1px">
                     <i class="fas fa-star"></i>
                   </span>
-                  <span style="font-size: 0.7em; color: #0065fc; margin: 1px">
+                  <span class="card__star" style="font-size: 0.7em; color: #0065fc; margin: 1px">
                     <i class="fas fa-star"></i>
                   </span>
-                  <span style="font-size: 0.7em; color: #0065fc; margin: 1px">
+                  <span class="card__star" style="font-size: 0.7em; color: #0065fc; margin: 1px">
                     <i class="fas fa-star"></i>
                   </span>
-                  <span style="font-size: 0.7em; color: #0065fc; margin: 1px">
+                  <span class="card__star" style="font-size: 0.7em; color: #0065fc; margin: 1px">
                     <i class="fas fa-star"></i>
                   </span>
-                  <span style="font-size: 0.7em; color: #0065fc; margin: 1px">
+                  <span class="card__star" style="font-size: 0.7em; color: #f2f2f2; margin: 1px">
                     <i class="fas fa-star"></i>
                   </span>
                 </div>
@@ -278,29 +269,30 @@
           </a>
         </div>
 
-        <div class="bloc-3__accommodations-container__cards-container__card">
-          <a href="#">
-            <div class="bloc-3__accommodations-container__cards-container__card__content">
+        <div class="card card--special">
+          <a class="card__link" href="#">
+            <div class="card__content">
               <div>
-                <img src="images/hebergements/3_medium/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Hôtel Les mouettes" />
+                <img class="card__image card__image--special"
+                  src="images/hebergements/3_medium/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Auberge la Cannebière" />
               </div>
-              <div class="text">
+              <div class="card__text">
                 <h2>Hôtel Les mouettes</h2>
                 <p>Nuit à partir de 76<b>€</b></p>
-                <div class="stars">
-                  <span style="font-size: 0.7em; color: #0065fc; margin: 1px">
+                <div class="card__rating">
+                  <span class="card__star" style="font-size: 0.7em; color: #0065fc; margin: 1px">
                     <i class="fas fa-star"></i>
                   </span>
-                  <span style="font-size: 0.7em; color: #0065fc; margin: 1px">
+                  <span class="card__star" style="font-size: 0.7em; color: #0065fc; margin: 1px">
                     <i class="fas fa-star"></i>
                   </span>
-                  <span style="font-size: 0.7em; color: #0065fc; margin: 1px">
+                  <span class="card__star" style="font-size: 0.7em; color: #0065fc; margin: 1px">
                     <i class="fas fa-star"></i>
                   </span>
-                  <span style="font-size: 0.7em; color: #0065fc; margin: 1px">
+                  <span class="card__star" style="font-size: 0.7em; color: #0065fc; margin: 1px">
                     <i class="fas fa-star"></i>
                   </span>
-                  <span style="font-size: 0.7em; color: #f2f2f2; margin: 1px">
+                  <span class="card__star" style="font-size: 0.7em; color: #f2f2f2; margin: 1px">
                     <i class="fas fa-star"></i>
                   </span>
                 </div>
@@ -309,29 +301,31 @@
           </a>
         </div>
 
-        <div class="bloc-3__accommodations-container__cards-container__card">
-          <a href="#">
-            <div class="bloc-3__accommodations-container__cards-container__card__content">
+        <div class="card card--special">
+          <a class="card__link" href="#">
+            <div class="card__content">
               <div>
-                <img src="images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="Hôtel de la mer" />
+                <img class="card__image card__image--special"
+                  src="images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg"
+                  alt="Auberge la Cannebière" />
               </div>
-              <div class="text">
+              <div class="card__text">
                 <h2>Hôtel de la mer</h2>
                 <p>Nuit à partir de 46<b>€</b></p>
-                <div class="stars">
-                  <span style="font-size: 0.7em; color: #0065fc; margin: 1px">
+                <div class="card__rating">
+                  <span class="card__star" style="font-size: 0.7em; color: #0065fc; margin: 1px">
                     <i class="fas fa-star"></i>
                   </span>
-                  <span style="font-size: 0.7em; color: #0065fc; margin: 1px">
+                  <span class="card__star" style="font-size: 0.7em; color: #0065fc; margin: 1px">
                     <i class="fas fa-star"></i>
                   </span>
-                  <span style="font-size: 0.7em; color: #0065fc; margin: 1px">
+                  <span class="card__star" style="font-size: 0.7em; color: #0065fc; margin: 1px">
                     <i class="fas fa-star"></i>
                   </span>
-                  <span style="font-size: 0.7em; color: #f2f2f2; margin: 1px">
+                  <span class="card__star" style="font-size: 0.7em; color: #0065fc; margin: 1px">
                     <i class="fas fa-star"></i>
                   </span>
-                  <span style="font-size: 0.7em; color: #f2f2f2; margin: 1px">
+                  <span class="card__star" style="font-size: 0.7em; color: #f2f2f2; margin: 1px">
                     <i class="fas fa-star"></i>
                   </span>
                 </div>
@@ -340,29 +334,30 @@
           </a>
         </div>
 
-        <div class="bloc-3__accommodations-container__cards-container__card">
-          <a href="#">
-            <div class="bloc-3__accommodations-container__cards-container__card__content">
+        <div class="card card--special">
+          <a class="card__link" href="#">
+            <div class="card__content">
               <div>
-                <img src="images/hebergements/3_medium/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Auberge Le Panier" />
+                <img class="card__image card__image--special"
+                  src="images/hebergements/3_medium/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Auberge la Cannebière" />
               </div>
-              <div class="text">
+              <div class="card__text">
                 <h2>Auberge Le Panier</h2>
                 <p>Nuit à partir de 23<b>€</b></p>
-                <div class="stars">
-                  <span style="font-size: 0.7em; color: #0065fc; margin: 1px">
+                <div class="card__rating">
+                  <span class="card__star" style="font-size: 0.7em; color: #0065fc; margin: 1px">
                     <i class="fas fa-star"></i>
                   </span>
-                  <span style="font-size: 0.7em; color: #0065fc; margin: 1px">
+                  <span class="card__star" style="font-size: 0.7em; color: #0065fc; margin: 1px">
                     <i class="fas fa-star"></i>
                   </span>
-                  <span style="font-size: 0.7em; color: #0065fc; margin: 1px">
+                  <span class="card__star" style="font-size: 0.7em; color: #0065fc; margin: 1px">
                     <i class="fas fa-star"></i>
                   </span>
-                  <span style="font-size: 0.7em; color: #0065fc; margin: 1px">
+                  <span class="card__star" style="font-size: 0.7em; color: #0065fc; margin: 1px">
                     <i class="fas fa-star"></i>
                   </span>
-                  <span style="font-size: 0.7em; color: #f2f2f2; margin: 1px">
+                  <span class="card__star" style="font-size: 0.7em; color: #f2f2f2; margin: 1px">
                     <i class="fas fa-star"></i>
                   </span>
                 </div>
@@ -371,30 +366,31 @@
           </a>
         </div>
 
-        <div class="bloc-3__accommodations-container__cards-container__card">
-          <a href="#">
-            <div class="bloc-3__accommodations-container__cards-container__card__content">
+        <div class="card card--special">
+          <a class="card__link" href="#">
+            <div class="card__content">
               <div>
-                <img src="images/hebergements/3_medium/febrian-zakaria-M6S1WvfW68A-unsplash.jpg"
-                  alt="Hôtel chez Amina" />
+                <img class="card__image card__image--special"
+                  src="images/hebergements/3_medium/febrian-zakaria-M6S1WvfW68A-unsplash.jpg"
+                  alt="Auberge la Cannebière" />
               </div>
-              <div class="text">
+              <div class="card__text">
                 <h2>Hôtel chez Amina</h2>
                 <p>Nuit à partir de 96<b>€</b></p>
-                <div class="stars">
-                  <span style="font-size: 0.7em; color: #0065fc; margin: 1px">
+                <div class="card__rating">
+                  <span class="card__star" style="font-size: 0.7em; color: #0065fc; margin: 1px">
                     <i class="fas fa-star"></i>
                   </span>
-                  <span style="font-size: 0.7em; color: #0065fc; margin: 1px">
+                  <span class="card__star" style="font-size: 0.7em; color: #0065fc; margin: 1px">
                     <i class="fas fa-star"></i>
                   </span>
-                  <span style="font-size: 0.7em; color: #0065fc; margin: 1px">
+                  <span class="card__star" style="font-size: 0.7em; color: #0065fc; margin: 1px">
                     <i class="fas fa-star"></i>
                   </span>
-                  <span style="font-size: 0.7em; color: #0065fc; margin: 1px">
+                  <span class="card__star" style="font-size: 0.7em; color: #0065fc; margin: 1px">
                     <i class="fas fa-star"></i>
                   </span>
-                  <span style="font-size: 0.7em; color: #0065fc; margin: 1px">
+                  <span class="card__star" style="font-size: 0.7em; color: #f2f2f2; margin: 1px">
                     <i class="fas fa-star"></i>
                   </span>
                 </div>
@@ -402,127 +398,128 @@
             </div>
           </a>
         </div>
+
       </div>
       <button class="bloc-3__btn">Afficher plus</button>
-    </div>
+    </section>
+  </section>
 
-    <div id="activities" class="bloc-4">
-      <div class="bloc-4__activities-container">
-        <div class="bloc-4__activities-container__header">
-          <h1>Activités à Marseille</h1>
+  <div id="activities" class="bloc-4">
+    <div class="bloc-4__activities-container">
+      <div class="bloc-4__activities-container__header">
+        <h1>Activités à Marseille</h1>
+      </div>
+      <div class="bloc-4__activities-container__cards-container ">
+        <div class="bloc-4__activities-container__cards-container__card">
+          <a href="#">
+            <div class="bloc-4__activities-container__cards-container__card__content">
+              <div>
+                <img src="images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Vieux Port" />
+              </div>
+              <div class="text">
+                <h2>Vieux Port</h2>
+              </div>
+            </div>
+          </a>
         </div>
-        <div class="bloc-4__activities-container__cards-container ">
-          <div class="bloc-4__activities-container__cards-container__card">
-            <a href="#">
-              <div class="bloc-4__activities-container__cards-container__card__content">
-                <div>
-                  <img src="images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Vieux Port" />
-                </div>
-                <div class="text">
-                  <h2>Vieux Port</h2>
-                </div>
-              </div>
-            </a>
-          </div>
 
-          <div class="bloc-4__activities-container__cards-container__card">
-            <a href="#">
-              <div class="bloc-4__activities-container__cards-container__card__content">
-                <div>
-                  <img src="images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Fort de Pomègues" />
-                </div>
-                <div class="text">
-                  <h2>Fort de Pomègues</h2>
-                </div>
+        <div class="bloc-4__activities-container__cards-container__card">
+          <a href="#">
+            <div class="bloc-4__activities-container__cards-container__card__content">
+              <div>
+                <img src="images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Fort de Pomègues" />
               </div>
-            </a>
-          </div>
+              <div class="text">
+                <h2>Fort de Pomègues</h2>
+              </div>
+            </div>
+          </a>
+        </div>
 
-          <div class="bloc-4__activities-container__cards-container__card">
-            <a href="#">
-              <div class="bloc-4__activities-container__cards-container__card__content">
-                <div>
-                  <img src="images/activites/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="Île du Frioul" />
-                </div>
-                <div class="text">
-                  <h2>Île du Frioul</h2>
-                </div>
+        <div class="bloc-4__activities-container__cards-container__card">
+          <a href="#">
+            <div class="bloc-4__activities-container__cards-container__card__content">
+              <div>
+                <img src="images/activites/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="Île du Frioul" />
               </div>
-            </a>
-          </div>
+              <div class="text">
+                <h2>Île du Frioul</h2>
+              </div>
+            </div>
+          </a>
+        </div>
 
-          <div class="bloc-4__activities-container__cards-container__card">
-            <a href="#">
-              <div class="bloc-4__activities-container__cards-container__card__content">
-                <div>
-                  <img src="images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg"
-                    alt="Île du Frioul" />
-                </div>
-                <div class="text">
-                  <h2>Parc National des Calanques</h2>
-                </div>
+        <div class="bloc-4__activities-container__cards-container__card">
+          <a href="#">
+            <div class="bloc-4__activities-container__cards-container__card__content">
+              <div>
+                <img src="images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Île du Frioul" />
               </div>
-            </a>
-          </div>
+              <div class="text">
+                <h2>Parc National des Calanques</h2>
+              </div>
+            </div>
+          </a>
+        </div>
 
-          <div class="bloc-4__activities-container__cards-container__card">
-            <a href="#">
-              <div class="bloc-4__activities-container__cards-container__card__content">
-                <div>
-                  <img src="images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg"
-                    alt="Notre-Dame-de-la-Garde" />
-                </div>
-                <div class="text">
-                  <h2>Notre-Dame-de-la-Garde</h2>
-                </div>
+        <div class="bloc-4__activities-container__cards-container__card">
+          <a href="#">
+            <div class="bloc-4__activities-container__cards-container__card__content">
+              <div>
+                <img src="images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg"
+                  alt="Notre-Dame-de-la-Garde" />
               </div>
-            </a>
-          </div>
+              <div class="text">
+                <h2>Notre-Dame-de-la-Garde</h2>
+              </div>
+            </div>
+          </a>
+        </div>
 
-          <div class="bloc-4__activities-container__cards-container__card">
-            <a href="#">
-              <div class="bloc-4__activities-container__cards-container__card__content">
-                <div>
-                  <img src="images/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Parc Longchamp" />
-                </div>
-                <div class="text">
-                  <h2>Parc Longchamp</h2>
-                </div>
+        <div class="bloc-4__activities-container__cards-container__card">
+          <a href="#">
+            <div class="bloc-4__activities-container__cards-container__card__content">
+              <div>
+                <img src="images/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Parc Longchamp" />
               </div>
-            </a>
-          </div>
+              <div class="text">
+                <h2>Parc Longchamp</h2>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
     </div>
+  </div>
 
-    <footer class="footer-container">
-      <div class="footer-container--margin">
-        <div class="footer-container__about-section">
-          <h2>A propos</h2>
-          <ul>
-            <li><a href="#">Fonctionnement du site</a></li>
-            <li><a href="#">Conditions générales de vente</a></li>
-            <li>
-              <a href="#">Données et confidentialité</a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-container__our-accommodations">
-          <h2>Nos hébergements</h2>
-          <ul>
-            <li><a href="#">Charte qualité</a></li>
-            <li><a href="#">Soumettre votre hôtel</a></li>
-          </ul>
-        </div>
-        <div class="footer-container__assistance-section">
-          <h2>Assistance</h2>
-          <ul>
-            <li><a href="#">Centre d'aide</a></li>
-            <li><a href="#">Nous contacter</a></li>
-          </ul>
-        </div>
+  <footer class="footer-container">
+    <div class="footer-container--margin">
+      <div class="footer-container__about-section">
+        <h2>A propos</h2>
+        <ul>
+          <li><a href="#">Fonctionnement du site</a></li>
+          <li><a href="#">Conditions générales de vente</a></li>
+          <li>
+            <a href="#">Données et confidentialité</a>
+          </li>
+        </ul>
       </div>
-    </footer>
+      <div class="footer-container__our-accommodations">
+        <h2>Nos hébergements</h2>
+        <ul>
+          <li><a href="#">Charte qualité</a></li>
+          <li><a href="#">Soumettre votre hôtel</a></li>
+        </ul>
+      </div>
+      <div class="footer-container__assistance-section">
+        <h2>Assistance</h2>
+        <ul>
+          <li><a href="#">Centre d'aide</a></li>
+          <li><a href="#">Nous contacter</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
   </div>
 </body>
 
