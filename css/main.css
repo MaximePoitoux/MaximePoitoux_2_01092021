@@ -32,6 +32,12 @@
   --card-title-size-tablet: 0.7em;
   --card-p-size-tablet: 0.6em;
   --section-padding-tablet: 5px 30px;
+
+  --h1-size-desktop: 1.4em;
+  --p-size-desktop: 0.8em;
+  --card-title-size-desktop: 1em;
+  --card-p-size-desktop: 0.8em;
+  --star-size-desktop: 0.6em;
 }
 
 /* ========================================================================== 
@@ -825,4 +831,74 @@ FOOTER MEDIA QUERIES
 
 }
 
-@media only screen and (min-width: 1140px) {}
+@media only screen and (min-width: 1140px) {
+  .card-sm-img {
+    height: 120px;
+  }
+
+  .card-sm-img__title {
+    font-size: var(--card-title-size-desktop);
+  }
+
+  .card-sm-img__paragraph {
+    font-size: var(--card-p-size-desktop);
+  }
+
+  .card-sm-img__star {
+    font-size: var(--star-size-desktop);
+  }
+
+  .cards-lg-container {
+    width: 100%;
+  }
+
+  .card-lg-img {
+    height: 170px;
+    width: 30%;
+  }
+
+  .card-lg-img__title {
+    font-size: var(--card-title-size-desktop);
+  }
+
+  .card-lg-img__paragraph {
+    font-size: var(--card-p-size-desktop);
+  }
+
+  .card-lg-img__star {
+    font-size: var(--star-size-desktop);
+  }
+
+  .card-lg-img__picture {
+    height: 110px;
+  }
+
+  .card-lg-img__text-content {
+    height: 60px;
+  }
+
+  .category__title {
+    font-size: var(--h1-size-desktop);
+  }
+
+  .cards-xl-container {
+    height: 320px;
+  }
+
+  .card-xl-img__title {
+    font-size: var(--card-title-size-desktop);
+  }
+
+  .footer__title {
+    font-size: var(--p-size-desktop);
+  }
+
+  .footer__link {
+    font-size: var(--p-size-desktop);
+  }
+
+  .footer__elem {
+    margin: 5px 0;
+  }
+  
+}
