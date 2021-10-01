@@ -248,7 +248,6 @@ FILTER - MOBILE FIRST
 }
 
 .filter__text {
-  font-weight: bold;
   padding: 10px;
   font-size: var(--p-size);
 }
@@ -294,8 +293,7 @@ CATEGORY - MOBILE FIRST
 
 .category__icon {
   font-size: var(--icon-size);
-  color: black"
-
+  color: black;
 }
 
 /* ========================================================================== 
@@ -856,6 +854,9 @@ FOOTER - MEDIA QUERIES TABLET
 MEDIA QUERIES DESKTOP
 ========================================================================== */
 @media only screen and (min-width: 1140px) {
+  section:nth-of-type(3) {
+    margin: 20px 0;
+  }
 
   .introduction__title,
   .category__title {
