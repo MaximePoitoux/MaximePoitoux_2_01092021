@@ -2,6 +2,7 @@
 
 /* VARIABLES CSS */
 :root {
+  /* Mobile */
   --primary-color: #0065fc;
   --secondary-color: #deebff;
   --background-color: #f2f2f2;
@@ -13,27 +14,31 @@
   --icon-size: 1.2em;
   --star-size: 0.7em;
   --h1-size: 1.4em;
-  --h2-size: 1.2em;
   --p-size: 1em;
-  --a-size: 1em;
-  --btn-size: 1em;
   --card-title-size: 1em;
   --section-padding: 20px;
   --card-xl-title-padding: 15px;
   --star-margin: 1px;
 
+  /* Tablet */
   --h1-size-tablet: 1em;
-  --h2-size-tablet: 0.9em;
   --p-size-tablet: 0.8em;
-  --a-size-tablet: 0.8em;
-  --btn-size-tablet: 0.8em;
   --icon-size-tablet: 0.8em;
   --star-size-tablet: 0.5em;
-  --btn-height-tablet: 36px;
+  --card-p-size-tablet: 0.6em;
   --section-radius-tablet: 15px;
   --card-title-size-tablet: 0.7em;
-  --card-p-size-tablet: 0.6em;
   --section-padding-tablet: 5px 30px;
+  --btn-height-tablet: 36px;
+
+  /* Desktop */
+  --h1-size-desktop: 1.2em;
+  --p-size-desktop: 1em;
+  --icon-size-desktop: 1em;
+  --star-size-desktop: 0.7em;
+  --card-title-size-desktop: 0.9em;
+  --card-p-size-desktop: 0.8em;
+  --btn-height-desktop: 38px;
 }
 
 /* ========================================================================== 
@@ -85,7 +90,7 @@ LAYOUT / MARGIN / PADDING / BACKGROUND-COLOR
 }
 
 /* ========================================================================== 
-HEADER
+HEADER - MOBILE FIRST
 ========================================================================== */
 .header__logo {
   padding: 20px;
@@ -96,7 +101,7 @@ HEADER
 }
 
 /* ========================================================================== 
-NAV
+NAV - MOBILE FIRST
 ========================================================================== */
 .nav {
   flex-direction: row-reverse;
@@ -113,7 +118,7 @@ NAV
   margin-top: 40px;
   text-align: end;
   padding-right: 20px;
-  font-size: var(--btn-size);
+  font-size: var(--p-size);
 }
 
 .nav__list {
@@ -135,7 +140,7 @@ NAV
   text-decoration: none;
   color: black;
   width: 100%;
-  font-size: var(--a-size);
+  font-size: var(--p-size);
   display: flex;
   justify-content: center;
   padding: 10px;
@@ -148,7 +153,7 @@ NAV
 }
 
 /* ========================================================================== 
-INTRODUCTION
+INTRODUCTION - MOBILE FIRST
 ========================================================================== */
 .introduction {
   margin-bottom: 10px;
@@ -164,7 +169,7 @@ INTRODUCTION
 }
 
 /* ========================================================================== 
-SEARCHBAR
+SEARCHBAR - MOBILE FIRST
 ========================================================================== */
 .searchbar {
   display: flex;
@@ -203,13 +208,17 @@ SEARCHBAR
   border: none;
   width: 62%;
   outline: none;
-  font-size: var(--h2-size);
+  font-size: var(--p-size);
   padding: 0 10px;
 }
 
 /* ========================================================================== 
-FILTER
+FILTER - MOBILE FIRST
 ========================================================================== */
+.filter__title {
+  font-weight: bold;
+}
+
 .filter__btn {
   height: 50px;
   background: inherit;
@@ -239,12 +248,13 @@ FILTER
 }
 
 .filter__text {
+  font-weight: bold;
   padding: 10px;
   font-size: var(--p-size);
 }
 
 /* ========================================================================== 
-INFORMATION
+INFORMATION - MOBILE FIRST
 ========================================================================== */
 .information {
   display: flex;
@@ -270,7 +280,7 @@ INFORMATION
 }
 
 /* ========================================================================== 
-CATEGORY
+CATEGORY - MOBILE FIRST
 ========================================================================== */
 .category {
   display: flex;
@@ -289,7 +299,7 @@ CATEGORY
 }
 
 /* ========================================================================== 
-CARD-SM-IMG
+CARD-SM-IMG - MOBILE FIRST
 ========================================================================== */
 .card-sm-img {
   background-color: white;
@@ -368,7 +378,7 @@ CARD-SM-IMG
 }
 
 /* ========================================================================== 
-CARD-LG-IMG
+CARD-LG-IMG - MOBILE FIRST
 ========================================================================== */
 .card-lg-img {
   height: 190px;
@@ -446,12 +456,12 @@ CARD-LG-IMG
   background-color: inherit;
   border: none;
   padding: 0;
-  font-size: var(--btn-size);
+  font-size: var(--p-size);
   margin-top: 15px;
 }
 
 /* ========================================================================== 
-CARD-XL-IMG
+CARD-XL-IMG - MOBILE FIRST
 ========================================================================== */
 .card-xl-img {
   height: 180px;
@@ -501,7 +511,7 @@ CARD-XL-IMG
 }
 
 /* ========================================================================== 
-FOOTER 
+FOOTER - MOBILE FIRST
 ========================================================================== */
 .footer {
   background-color: var(--background-color, lightgrey);
@@ -514,7 +524,7 @@ FOOTER
 }
 
 .footer__title {
-  font-size: var(--h2-size);
+  font-size: var(--p-size);
 }
 
 .footer__list {
@@ -531,7 +541,7 @@ FOOTER
 .footer__link {
   text-decoration: none;
   color: black;
-  font-size: var(--a-size);
+  font-size: var(--p-size);
 }
 
 /* ==========================================================================
@@ -602,13 +612,13 @@ HEADER & NAV - MEDIA QUERIES TABLET
   .nav__btn {
     width: auto;
     margin: 0;
-    font-size: var(--btn-size-tablet);
+    font-size: var(--p-size-tablet);
   }
 
   .nav__link {
     border-bottom: none;
     padding: 20px;
-    font-size: var(--a-size-tablet);
+    font-size: var(--p-size-tablet);
   }
 
   .nav__link--active {
@@ -666,7 +676,7 @@ INTRODUCTION & SEARCHBAR & FILTER & INFORMATION - MEDIA QUERIES TABLET
 
   .filter__title {
     margin: 0 15px 0 0;
-    font-size: var(--h2-size-tablet);
+    font-size: var(--p-size-tablet);
   }
 
   .filter__btn {
@@ -720,6 +730,7 @@ CARD-SM-IMG - MEDIA QUERIES TABLET
 
   .card-sm-img__title {
     font-size: var(--card-title-size-tablet);
+    margin: 4px 0;
   }
 
   .card-sm-img__paragraph {
@@ -768,13 +779,12 @@ CARD-LG-IMG - MEDIA QUERIES TABLET
   }
 
   .btn-scroll {
-    font-size: var(--btn-size-tablet);
+    font-size: var(--p-size-tablet);
   }
 
   /* ========================================================================== 
 CARD-XL-IMG - MEDIA QUERIES TABLET
 ========================================================================== */
-
   .cards-xl-container {
     height: 260px;
     flex-wrap: wrap;
@@ -825,11 +835,11 @@ FOOTER - MEDIA QUERIES TABLET
   }
 
   .footer__title {
-    font-size: var(--card-title-size-tablet);
+    font-size: var(--p-size-tablet);
   }
 
   .footer__link {
-    font-size: var(--card-p-size-tablet);
+    font-size: var(--p-size-tablet);
   }
 
   .footer__list {
@@ -837,7 +847,7 @@ FOOTER - MEDIA QUERIES TABLET
   }
 
   .footer__elem {
-    margin: 0;
+    margin: 5px 0;
   }
 
 }
@@ -847,9 +857,69 @@ MEDIA QUERIES DESKTOP
 ========================================================================== */
 @media only screen and (min-width: 1140px) {
 
+  .introduction__title,
+  .category__title {
+    font-size: var(--h1-size-desktop);
+  }
+
+  .nav__link,
+  .nav__btn,
+  .introduction__text,
+  .searchbar__input,
+  .searchbar__btn--blue::before,
+  .filter__title,
+  .filter__text,
+  .information__text,
+  .btn-scroll,
+  .footer__title,
+  .footer__link {
+    font-size: var(--p-size-desktop);
+  }
+
+  .searchbar__btn--blue {
+    width: 110px;
+  }
+
+  .footer__elem {
+    margin: 8px 0;
+  }
+
+  .filter__icon,
+  .category__icon,
+  .searchbar__icon,
+  .information__icon {
+    font-size: var(--icon-size-desktop);
+  }
+
+  .searchbar,
+  .filter__btn {
+    height: var(--btn-height-desktop);
+  }
+
+  .information__icon {
+    height: 25px;
+    width: 25px;
+  }
+
   /* ========================================================================== 
 CARD-SM-IMG & CARD-LG-IMG & CARD-XL-IMG - MEDIA QUERIES DESKTOP
 ========================================================================== */
+  .card-sm-img__title,
+  .card-lg-img__title,
+  .card-xl-img__title {
+    font-size: var(--card-title-size-desktop);
+  }
+
+  .card-sm-img__paragraph,
+  .card-lg-img__paragraph {
+    font-size: var(--card-p-size-desktop);
+  }
+
+  .card-sm-img__star,
+  .card-lg-img__star {
+    font-size: var(--star-size-desktop);
+  }
+
   .card-sm-img {
     height: 120px;
   }
@@ -860,7 +930,7 @@ CARD-SM-IMG & CARD-LG-IMG & CARD-XL-IMG - MEDIA QUERIES DESKTOP
 
   .card-lg-img {
     width: 30%;
-    height: 170px;
+    height: 175px;
   }
 
   .card-lg-img__picture {
@@ -868,7 +938,7 @@ CARD-SM-IMG & CARD-LG-IMG & CARD-XL-IMG - MEDIA QUERIES DESKTOP
   }
 
   .card-lg-img__text-content {
-    height: 62px;
+    height: 67px;
   }
 
   .cards-xl-container {
