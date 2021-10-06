@@ -45,13 +45,13 @@
 SECTION
 ========================================================================== */
 section:nth-of-type(1),
-section:nth-of-type(2) section,
+section:nth-of-type(2)>div,
 section:nth-of-type(3),
 .footer {
   padding: var(--section-padding)
 }
 
-section:nth-of-type(2) section:nth-child(1) {
+section:nth-of-type(2)>div:first-child {
   background-color: var(--background-color, lightgrey);
 }
 
@@ -206,7 +206,7 @@ SEARCHBAR - MOBILE FIRST
 
 .searchbar__input {
   border: none;
-  width: 62%;
+  width: 100%;
   outline: none;
   font-size: var(--p-size);
   padding: 0 10px;
@@ -557,7 +557,7 @@ SECTION - MEDIA QUERIES TABLET
     padding: var(--section-padding-tablet);
   }
 
-  section:nth-of-type(2) section {
+  section:nth-of-type(2)>div {
     padding: var(--section-padding);
   }
 
@@ -566,20 +566,20 @@ SECTION - MEDIA QUERIES TABLET
     flex-direction: row-reverse;
   }
 
-  section:nth-of-type(2) section:first-child {
+  section:nth-of-type(2)>div:first-child {
     width: 35%;
     border-radius: var(--section-radius-tablet);
     display: flex;
     flex-direction: column;
   }
 
-  section:nth-of-type(2) section:last-child {
+  section:nth-of-type(2)>div:last-child {
     background-color: var(--background-color, lightgrey);
     width: 65%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
     border-radius: var(--section-radius-tablet);
     margin-right: 22px;
   }
